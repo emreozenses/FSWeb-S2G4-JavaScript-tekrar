@@ -134,6 +134,10 @@ console.log(ucetambolunenler);
 /* kodlar buraya */
 
 //3c çözümü:
+ucetambolunenler.reduce((total, num) => {
+  return (ucebolunenlerintoplami = total + num);
+}, 0);
+console.log(ucebolunenlerintoplami);
 
 /* kodlar buraya */
 
