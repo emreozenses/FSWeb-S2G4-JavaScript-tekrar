@@ -142,14 +142,36 @@ console.log(ucebolunenlerintoplami);
 /* kodlar buraya */
 
 //3d çözümü
+besyuzdenkucuksayilar = sayilar.filter((num) => {
+  return num < 500;
+});
+console.log(besyuzdenkucuksayilar);
 
 /* kodlar buraya */
 
 //3e çözümü
+siralisayilar = [
+  ...besyuzdenkucuksayilar.sort((a, b) => {
+    return a - b;
+  }),
+];
+console.log(siralisayilar);
 
 /* kodlar buraya */
 
 //3f çözümü
+let tSayi = [];
+sayilar.forEach((num) => {
+  for (let i = 0; i < sayilar.length; i++) {
+    if (sayilar[i] === num) {
+      tSayi.push(sayilar[i]);
+    }
+  }
+  return tSayi;
+});
+tekraredensayilar = [];
+
+console.log(tSayi);
 
 /* kodlar buraya */
 
