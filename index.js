@@ -87,38 +87,32 @@ console.log(CemberinAlani(5, pi));
 
 /*  (oto test yok) sayilar dizisi içinde kaç adet sayı olduğunu konsola yazdırın */
 
-var ucebolunenlerintoplami,
+var enbuyuk,
+  enkucuk,
+  ucebolunenlerintoplami,
   besyuzdenkucuksayilar,
   siralisayilar,
   tekraredensayilar;
 
 //3a çözümü
 
-const enbuyuk = () => {
-  let enbuyukArr = [];
-  enbuyukArr.push(sayilar[0]);
-  for (let i = 0; i < sayilar.length; i++) {
-    if (enbuyukArr[0] < sayilar[i + 1]) {
-      enbuyukArr.pop();
-      enbuyukArr.push(sayilar[i + 1]);
-    }
-  }
-  return enbuyukArr;
-};
-console.log(enbuyuk());
+enbuyuk = sayilar[0];
 
-const enkucuk = () => {
-  let enkucukArr = [];
-  enkucukArr.push(sayilar[0]);
-  for (let i = 0; i < sayilar.length; i++) {
-    if (enkucukArr[0] > sayilar[i + 1]) {
-      enkucukArr.pop();
-      enkucukArr.push(sayilar[i + 1]);
-    }
+for (let i = 0; i < sayilar.length; i++) {
+  if (enbuyuk < sayilar[i]) {
+    enbuyuk = sayilar[i];
   }
-  return enkucukArr;
-};
-console.log(enkucuk());
+}
+
+enkucuk = sayilar[0];
+
+for (let i = 0; i < sayilar.length; i++) {
+  if (enkucuk > sayilar[i]) {
+    enkucuk = sayilar[i];
+  }
+}
+
+console.log(enkucuk);
 
 /* kodlar buraya */
 
