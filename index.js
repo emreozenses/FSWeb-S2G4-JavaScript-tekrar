@@ -154,18 +154,24 @@ console.log(siralisayilar);
 /* kodlar buraya */
 
 //3f çözümü
-let tSayi = [];
-sayilar.forEach((num) => {
-  for (let i = 0; i < sayilar.length; i++) {
-    if (sayilar[i] === num) {
-      tSayi.push(sayilar[i]);
-    }
-  }
-  return tSayi;
-});
 tekraredensayilar = [];
+let count = {};
+sayilar.forEach((num) => {
+  if (count[num]) {
+    count[num] += 1;
+  } else {
+    count[num] = 1;
+  }
+});
+for (let key in count) {
+  if (count[key] >= 2) {
+    tekraredensayilar.push(
+      `${key} sayısı ${count[key]} kere tekrar edilmiştir`
+    );
+  }
+}
 
-console.log(tSayi);
+console.log(tekraredensayilar);
 
 /* kodlar buraya */
 
